@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu
+        navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagens flexível">
+    </picture>
+    <h1>Reproduzindo Áudios</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio src="midia/Danger Snow - Dan Henig.mp3" controls autoplay></audio>
+    <!-- MP3 WAV OGG -->
+    <audio preload="metadata" controls loop>
+        <source src="midia/Danger Snow - Dan Henig.mp3" type="audio/mpeg">
+        <source src="midia/Danger Snow - Dan Henig.ogg" type="audio/ogg"><!--se tivesse em ogg-->
+        <source src="midia/Danger Snow - Dan Henig.wav" type="audio/wav"><!--se tivesse em wav-->
+        <p>Infelizmente seu arquivo não consegue reproduzir áudio. <a href="midia/Danger Snow - Dan Henig.mp3">Clique
+                aqui para baixar o arquivo mp3</a></p>
+    </audio>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <video src="midia/6f2fb197f2799f0c6725f8810da7f087.mp4" controls></video>
+    <video poster="imagens/Captura de Tela (2231).png" controls>
+        <!--1ª Tentativa-->
+        <source src="midia/6f2fb197f2799f0c6725f8810da7f087.mp4" type="video/mp4">
+        <!--2ª Tentativa-->
+        <source src="midia/6f2fb197f2799f0c6725f8810da7f087.m4v" type="video/m4v">
+        <!--3ª Tentativa-->
+        <source src="midia/6f2fb197f2799f0c6725f8810da7f087.webm" type="video/webm">
+        <!--4ª Tentativa-->
+        <source src="midia/6f2fb197f2799f0c6725f8810da7f087.ogv" type="video/ogv">
+        <!--Então neh...-->
+        <p>Seu navegador não tem compartibilidade com reprodução de vídeos.</p>
+    </video>
+    <h1>Incorporação de vídeos externos</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eF9Qoc6p_4Q" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</body>
+
+</html>
